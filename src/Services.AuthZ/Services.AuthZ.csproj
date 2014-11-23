@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C10A230E-A438-4E07-B041-FA7A0DF97F62}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services.AuthZ</RootNamespace>
+    <AssemblyName>Services.AuthZ</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>46088</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <Import Project="..\BuildConfiguration.WebProjects.targets" />
+  <ItemGroup>
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\packages\DotNetOpenAuth.Ultimate.4.3.4.13329\lib\net45-full\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack.Signed.4.0.23\lib\net40\ServiceStack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Api.Swagger">
+      <HintPath>..\packages\ServiceStack.Api.Swagger.Signed.4.0.23\lib\net40\ServiceStack.Api.Swagger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\packages\ServiceStack.Client.Signed.4.0.23\lib\net40\ServiceStack.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.Signed.4.0.23\lib\net40\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.23\lib\net40\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.Signed.4.0.23\lib\net40\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="docs\css\highlight.default.css" />
+    <Content Include="docs\css\screen.css" />
+    <Content Include="docs\images\logo_small.png" />
+    <Content Include="docs\images\pet_store_api.png" />
+    <Content Include="docs\images\throbber.gif" />
+    <Content Include="docs\images\wordnik_api.png" />
+    <Content Include="docs\index.html" />
+    <Content Include="docs\lib\backbone-min.js" />
+    <Content Include="docs\lib\handlebars-1.0.0.js" />
+    <Content Include="docs\lib\highlight.7.3.pack.js" />
+    <Content Include="docs\lib\jquery-1.8.0.min.js" />
+    <Content Include="docs\lib\jquery.ba-bbq.min.js" />
+    <Content Include="docs\lib\jquery.slideto.min.js" />
+    <Content Include="docs\lib\jquery.wiggle.min.js" />
+    <Content Include="docs\lib\shred.bundle.js" />
+    <Content Include="docs\lib\shred\content.js" />
+    <Content Include="docs\lib\swagger.js" />
+    <Content Include="docs\lib\underscore-min.js" />
+    <Content Include="docs\swagger-ui.js" />
+    <Content Include="docs\swagger-ui.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AppHost.gen.cs">
+      <ItemGuid>acb24863-7cb2-4d8b-a6ce-433e6fa6aa36</ItemGuid>
+    </Compile>
+    <Compile Include="Security\ClientApplicationStore.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\TestingOnlyService.cs" />
+    <Compile Include="Security\UserAuthInfo.cs" />
+    <Compile Include="Security\UserAuthInfoStore.cs" />
+    <Compile Include="Security\OAuthZServer.cs" />
+    <Compile Include="AppHost.cs" />
+    <Compile Include="Services\AccessTokens.cs">
+      <ItemGuid>915d2dd2-14e8-4a8f-b5cb-fd379f0c3f11</ItemGuid>
+    </Compile>
+    <Compile Include="Services\AccessTokens.gen.cs">
+      <ItemGuid>ffd4ea35-6896-48a2-9d91-b70d605b3a8c</ItemGuid>
+    </Compile>
+    <Compile Include="Services\ClientApplications.cs">
+      <ItemGuid>1d5ed2ad-9126-4b31-b725-1fe61b34a416</ItemGuid>
+    </Compile>
+    <Compile Include="Services\ClientApplications.gen.cs">
+      <ItemGuid>71274776-73f1-4dac-9cae-e31417d8efab</ItemGuid>
+    </Compile>
+    <Compile Include="Services\IAccessTokens.gen.cs">
+      <ItemGuid>eb7d70a7-ce0c-485a-8038-14cb0b7c4d36</ItemGuid>
+    </Compile>
+    <Compile Include="Services\IClientApplications.gen.cs">
+      <ItemGuid>1089bc5c-7a8c-403d-ac11-9d2ee57de001</ItemGuid>
+    </Compile>
+    <Compile Include="Services\ITestingOnlyService.cs" />
+    <Compile Include="Services\IUserAccounts.gen.cs">
+      <ItemGuid>a3b1a314-b6c4-42eb-bda2-04de97bacdca</ItemGuid>
+    </Compile>
+    <Compile Include="Services\UserAccounts.cs">
+      <ItemGuid>19dfaf81-d474-46bb-ad0a-e53d882b27a6</ItemGuid>
+    </Compile>
+    <Compile Include="Services\UserAccounts.gen.cs">
+      <ItemGuid>68332d6c-5d99-4da7-8484-531a1c37aa06</ItemGuid>
+    </Compile>
+    <Compile Include="Storage\DataEntities\ClientApplicationEntity.gen.cs" />
+    <Compile Include="Storage\ClientApplicationStorageProvider.gen.cs">
+      <ItemGuid>67b76fad-7ac5-4627-8e20-ee46f5663665</ItemGuid>
+    </Compile>
+    <Compile Include="Storage\DataEntities\ClientApplicationEntityStore.gen.cs" />
+    <Compile Include="Storage\DataEntities\UserAccountEntity.gen.cs" />
+    <Compile Include="Storage\DataEntities\UserAccountEntityStore.gen.cs" />
+    <Compile Include="Storage\UserAccountStorageProvider.gen.cs">
+      <ItemGuid>4e38c48d-d0d9-472f-8a86-e5a6d8ccff07</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\CreateAccessTokenValidator.cs">
+      <ItemGuid>e5b46c65-555f-4d29-ad92-209ec5f17761</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\CreateAccessTokenValidator.gen.cs">
+      <ItemGuid>f2c7cc59-1da7-4974-aedd-37d82778ae2d</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\CreateClientApplicationValidator.gen.cs">
+      <ItemGuid>e2416512-3259-4a7e-b872-941d589dc57b</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\CreateUserAccountValidator.cs">
+      <ItemGuid>afd0dda3-bf85-4f27-b22e-ca2ee625db3c</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\CreateUserAccountValidator.gen.cs">
+      <ItemGuid>5f0cfc65-9220-45f0-b956-c86cd83f48f7</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\DeleteClientApplicationValidator.gen.cs">
+      <ItemGuid>83f77790-1786-4971-b9d5-75006e9a8c56</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\DeleteUserAccountValidator.gen.cs">
+      <ItemGuid>850d7a76-67cb-49ed-a4a3-6ccd03deebb6</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\GetClientApplicationValidator.gen.cs">
+      <ItemGuid>02d54ba9-c5e0-438a-8e28-92a6ea5538ac</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\GetUserAccountValidator.gen.cs">
+      <ItemGuid>e668cedc-eb70-404b-8b87-daf947318aa7</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\ListUserAccountsValidator.gen.cs">
+      <ItemGuid>22f15ac5-58f5-4bb1-a81d-96e5dd078637</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\AddressValidator.cs" />
+    <Compile Include="Validators\UpdateUserAccountValidator.cs">
+      <ItemGuid>54299477-1366-49b7-b4d7-5528a5deedc0</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\UpdateUserAccountValidator.gen.cs">
+      <ItemGuid>ef650ff5-b30e-4d3f-9a7a-12bc1a5f596b</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\CreateClientApplicationValidator.cs">
+      <ItemGuid>aebf41c1-2fcb-42d6-88ea-dc094cbcb7b1</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\DeleteClientApplicationValidator.cs">
+      <ItemGuid>d5aebef9-b672-4660-b462-fce13a2475dd</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\DeleteUserAccountValidator.cs">
+      <ItemGuid>5117b266-a3a1-422f-b154-aafb1f3a5217</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\GetClientApplicationValidator.cs">
+      <ItemGuid>d03413f6-f232-4eb3-9307-4fc0add96646</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\GetUserAccountValidator.cs">
+      <ItemGuid>33421d82-a1ef-4254-a506-ed0f6b9d8aa8</ItemGuid>
+    </Compile>
+    <Compile Include="Validators\ListUserAccountsValidator.cs">
+      <ItemGuid>f41ecac0-3083-43b0-a4a8-03aee33a033a</ItemGuid>
+    </Compile>
+    <Compile Include="Workflow\AccessTokensManager.cs" />
+    <Compile Include="Workflow\ClientApplicationsManager.cs" />
+    <Compile Include="Security\DnoaAuthZRequestProvider.cs" />
+    <Compile Include="Security\DnoaAuthZResponse.cs" />
+    <Compile Include="Workflow\IAccessTokensManager.gen.cs">
+      <ItemGuid>b11c1a3c-75e4-4f53-8ef5-76904d8b8990</ItemGuid>
+    </Compile>
+    <Compile Include="Workflow\IClientApplicationsManager.cs" />
+    <Compile Include="Workflow\IClientApplicationsManager.gen.cs">
+      <ItemGuid>8a1b0b8a-2aca-4310-8f93-122074460656</ItemGuid>
+    </Compile>
+    <Compile Include="Security\IDnoaAuthZRequestProvider.cs" />
+    <Compile Include="Workflow\IUserAccountsManager.cs" />
+    <Compile Include="Workflow\IUserAccountsManager.gen.cs">
+      <ItemGuid>96ae0446-0045-427a-acee-2030c7e065f1</ItemGuid>
+    </Compile>
+    <Compile Include="Workflow\UserAccountsManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{544e4a30-9056-4e42-ae70-bdd1a6cdf9cc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.Interfaces\Services.Interfaces.csproj">
+      <Project>{90219005-fd52-424e-bf40-9b1b0d842f53}</Project>
+      <Name>Services.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>46088</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

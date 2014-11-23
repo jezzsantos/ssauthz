@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90219005-FD52-424E-BF40-9B1B0D842F53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <Import Project="..\BuildConfiguration.targets" />
+  <ItemGroup>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack.Signed.4.0.23\lib\net40\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\packages\ServiceStack.Client.Signed.4.0.23\lib\net40\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.Signed.4.0.23\lib\net40\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.23\lib\net40\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.Signed.4.0.23\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="MessageContracts\ResetWebRole.cs" />
+    <Compile Include="MessageContracts\ResetWebRoleResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DataContracts\AccessToken.gen.cs">
+      <ItemGuid>9c17be43-0bcf-4e49-a527-45b8f7df1663</ItemGuid>
+    </Compile>
+    <Compile Include="DataContracts\Address.cs" />
+    <Compile Include="DataContracts\ClientApplication.gen.cs">
+      <ItemGuid>c6509649-882c-4e4a-b952-89dd2a03022f</ItemGuid>
+    </Compile>
+    <Compile Include="DataContracts\IAccessToken.gen.cs">
+      <ItemGuid>abac3006-5156-4e88-9bda-73f36b9a4d2b</ItemGuid>
+    </Compile>
+    <Compile Include="DataContracts\IClientApplication.gen.cs">
+      <ItemGuid>af9fedbf-6ba7-4300-95ce-bd64f01349ec</ItemGuid>
+    </Compile>
+    <Compile Include="DataContracts\IUserAccount.gen.cs">
+      <ItemGuid>8487d9c8-872e-46c4-8904-b9b31a221599</ItemGuid>
+    </Compile>
+    <Compile Include="DataContracts\UserAccount.gen.cs">
+      <ItemGuid>5a97e416-17cb-4cc7-871a-32933dabd664</ItemGuid>
+    </Compile>
+    <Compile Include="DataContracts\UserAccountExtensions.cs" />
+    <Compile Include="MessageContracts\CreateAccessToken.gen.cs">
+      <ItemGuid>bea8617d-9d74-4344-b7e0-a692c7b1a886</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\CreateAccessTokenResponse.gen.cs">
+      <ItemGuid>f29b9157-a49b-449f-9d19-361e3c2a3d14</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\CreateClientApplication.gen.cs">
+      <ItemGuid>b528e0b6-62d4-45ad-a826-75848744865d</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\CreateClientApplicationResponse.gen.cs">
+      <ItemGuid>0ea06b57-804f-4d2d-a251-a2a3206fd54c</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\CreateUserAccount.gen.cs">
+      <ItemGuid>9b5275e8-2a7a-4c0a-9d3f-014b8136f482</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\CreateUserAccountResponse.gen.cs">
+      <ItemGuid>843eae1f-daff-4260-bbb5-f7ea0a6eec3a</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\DeleteClientApplication.gen.cs">
+      <ItemGuid>24366b19-3cfb-4e6f-a384-db1f04913c65</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\DeleteClientApplicationResponse.gen.cs">
+      <ItemGuid>32aeae91-d4f3-40ce-b739-62ef009ea4b5</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\DeleteUserAccount.gen.cs">
+      <ItemGuid>71a730b3-cb5c-4de2-992e-0a8e9cea7b2b</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\DeleteUserAccountResponse.gen.cs">
+      <ItemGuid>397cd96b-950f-46cb-b22d-92d2ea8ad383</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\GetClientApplication.gen.cs">
+      <ItemGuid>47eab6e4-d759-4460-8b4c-94c680aa7e41</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\GetClientApplicationResponse.gen.cs">
+      <ItemGuid>04e7bb36-fd1b-4ba3-8185-6c8657de0005</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\GetUserAccount.gen.cs">
+      <ItemGuid>6b1ccbc6-0919-46d7-891f-84a4dc9b8a04</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\GetUserAccountResponse.gen.cs">
+      <ItemGuid>87ce8aef-80d1-46c0-a41a-0c31a3045edd</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\ListUserAccounts.gen.cs">
+      <ItemGuid>3b0a25b2-d4f9-44c0-9a7b-c164f764f602</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\ListUserAccountsResponse.gen.cs">
+      <ItemGuid>22a4adc5-e164-4414-b441-b82babad7651</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\UpdateUserAccount.gen.cs">
+      <ItemGuid>fd911fa0-77fb-42a4-9ec9-d66f930abf0f</ItemGuid>
+    </Compile>
+    <Compile Include="MessageContracts\UpdateUserAccountResponse.gen.cs">
+      <ItemGuid>4473b59d-6d2a-4599-9923-015f3b2bef67</ItemGuid>
+    </Compile>
+    <Compile Include="ServiceInterfaces.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{544e4a30-9056-4e42-ae70-bdd1a6cdf9cc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
